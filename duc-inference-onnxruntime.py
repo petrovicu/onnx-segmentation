@@ -136,8 +136,8 @@ def postprocess(labels):
 
 
 # read image as rgb
-original_image_name = '25'
-original_image_extension = '.jpeg'
+original_image_name = 'ny'
+original_image_extension = '.jpg'
 original_image_path = 'images/input/roadsegmentation/' + original_image_name + original_image_extension
 im = cv.imread(original_image_path)[:, :, ::-1]
 # Firstly, resize image
@@ -179,11 +179,11 @@ print('========================================')
 # ------------------------- Display segmented output -------------------------
 # Each pixel is colored with a different color according to the class into which they are classified.
 # Refer to cityscape_labels.py for category names and their corresponding colors.
-result_img = result_img.save('images/output/roadsegmentation/' + 'onnxtest4' + '-result.png')
+result_img = result_img.save('images/output/roadsegmentation/' + original_image_name + '-result.png')
 
 # ------------------------- Display blended output -------------------------
 # The segmentation map is overlayed on top of the input image to have a more precise visualization
-blended_img = blended_img.save('images/output/roadsegmentation/' + 'onnxtest4' + '-blended.png')
+blended_img = blended_img.save('images/output/roadsegmentation/' + original_image_name + '-blended.png')
 
 # ------------------------- Print confidence score -------------------------
 # Confidence score is the maximum value of softmax output averaged over all pixels.

@@ -51,3 +51,5 @@ workspace.xml
 
 # Sphinx documentation
 docs/_build/
+/images/output/roadsegmentation/*
+/images/output/roadsegmentation/*
